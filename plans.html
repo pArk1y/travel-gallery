@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Планирование поездок - Галерея путешествий</title>
+  <link rel="stylesheet" href="assets/styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Галерея путешествий</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="home.html">Главная</a></li>
+        <li><a href="contact.html">Обратная связь</a></li>
+        <li><a href="plans.html">Планирование</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="todo-section">
+      <h2>Планирование поездок для фотосъёмки</h2>
+      <form id="task-form">
+        <div class="text-field">
+          <label for="task-name">Название задачи:</label>
+          <input type="text" id="task-name" required />
+        </div>
+        <div class="text-field">
+          <label for="task-date">Дата:</label>
+          <input type="date" id="task-date" required />
+        </div>
+        <div class="text-field">
+          <label for="task-priority">Приоритет:</label>
+          <select id="task-priority">
+            <option value="high">Высокий</option>
+            <option value="medium">Средний</option>
+            <option value="low">Низкий</option>
+          </select>
+        </div>
+        <button type="submit">Добавить задачу</button>
+      </form>
+
+      <div class="controls">
+        <button id="delete-selected">Удалить выделенные</button>
+        <button id="sort-by-date">Сортировать по дате</button>
+        <button id="filter-high">Показать высокие приоритеты</button>
+        <button id="show-all">Показать все</button>
+      </div>
+
+      <ul id="task-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Галерея путешествий</p>
+  </footer>
+
+  <script src="assets/scripts/app.js"></script>
+</body>
+</html>

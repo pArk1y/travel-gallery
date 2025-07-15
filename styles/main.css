@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.site-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.gallery-categories .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.category-card {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  flex: 1 1 calc(33% - 1rem);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.photo-placeholder {
+  background-color: #eee;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-section,
+.todo-section {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.text-field {
+  margin-bottom: 1rem;
+}
+
+.text-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.text-field input,
+.text-field textarea,
+.text-field select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.text-field__message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+#task-list {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.site-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.category-image {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}

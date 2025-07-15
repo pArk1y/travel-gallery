@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Обратная связь - Галерея путешествий</title>
+  <link rel="stylesheet" href="assets/styles/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Галерея путешествий</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="home.html">Главная</a></li>
+        <li><a href="contact.html">Обратная связь</a></li>
+        <li><a href="plans.html">Планирование</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <section class="feedback-section">
+      <h2>Оставьте свой отзыв о галерее</h2>
+      <form id="feedback-form" action="server/save_feedback.php" method="POST">
+        <div class="text-field">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+          <div class="text-field__message"></div>
+        </div>
+        <div class="text-field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <div class="text-field__message"></div>
+        </div>
+        <div class="text-field">
+          <label for="message">Сообщение:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="text-field__message"></div>
+        </div>
+        <button type="submit">Отправить</button>
+      </form>
+
+      <h3>Последние отзывы</h3>
+      <div id="feedback-list">
+        <?php include 'server/load_feedbacks.php'; ?>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Галерея путешествий</p>
+  </footer>
+
+  <script src="assets/scripts/app.js"></script>
+</body>
+</html>
